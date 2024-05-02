@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: pgpswd
+    driverClassName: org.postgresql.Driver
+  jpa:
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+

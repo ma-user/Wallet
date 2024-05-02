@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package conversion;
+
+option java_multiple_files = true;
+
+service ConversionService {
+    rpc ConvertCurrency (ConversionRequest) returns (ConversionResponse);
+}
+
+message ConversionRequest {
+    string baseCurrency = 1;
+    string sourceCurrency = 2;
+    double transferAmount = 3;
+}
+
+message ConversionResponse {
+    double convertedAmount = 1;
+}
